@@ -1,5 +1,5 @@
 :root{
-    /*These colors represent the ones the style guide provided.*/
+    /***** Start Color Types *****/
     --primary-color-space-cadet: #2d2f73;
     --primary-color-oxley: #81a584;
     --primary-color-jarcarta: #383979;
@@ -7,53 +7,155 @@
     --primary-color-black: #000000;
 
     --secondary-color-mandarin: #f47a4b;
+    --darkened-jarcarta: hsl(241, 35%, 25%);
+    /***** End Color Types *****/
+
+    /***** Start Font Families *****/
+
+    --header-font-family: "Philosopher" , sans-serif;
+    --paragraph-font-family: "Roboto", sans-serif;
+    --regular-weight: 400;
+    --bold-weight: 700;
+    --paragraph-font-size: 15px;
+    --header-font-size: 30px;
+
+    /***** End Font Families *****/
 }
 
-/***** Start font families *****/
+/***** Body Content Classes *****/
 
-/* Philopsopher Font Family Types*/
-.philosopher-regular {
-    font-family: "Philosopher", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
+body{
+  margin: 0%;
+  background-color: var(--primary-color-white);
+ }
+
+.horizontal-flex-container{
+  width: 100%;
+  gap: 30px;
+  display: flex;
+  transform:translateY(50%);
+}
+
+/********************************/
   
-  .philosopher-bold {
-    font-family: "Philosopher", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-  }
-  
-  .philosopher-regular-italic {
-    font-family: "Philosopher", sans-serif;
-    font-weight: 400;
-    font-style: italic;
-  }
-  
-  .philosopher-bold-italic {
-    font-family: "Philosopher", sans-serif;
-    font-weight: 700;
-    font-style: italic;
+/***** Start Text Classes *****/
+
+/* Header Text Clasees */
+ .header-regular {
+  font-family: var(--header-font-family);
+  font-size: var(--header-font-size);
+ }
+
+ .header-regular-italic{
+  font-family: var(--header-font-family);
+  font-size: var(--header-font-size);
+  font-style: italic;
+ }
+
+ .header-bold{
+  font-family: var(--header-font-family);
+  font-size: var(--header-font-size);
+  font-weight: var(--bold-weight);
+ }
+
+ .header-bold-italic{
+  font-family: var(--header-font-family);
+  font-size: var(--header-font-size);
+  font-weight: var(--bold-weight);
+  font-style: italic;
+ }
+
+ .title-header {
+  font-size: 100;
+ }
+ /**********************/
+
+ /* Paragraph Text Classes */
+
+ .paragraph-regular {
+  font-family: var(--paragraph-font-family);
+  font-size: var(--paragraph-font-size);
+ }
+
+ .paragraph-regular-italic {
+  font-family: var(--paragraph-font-family);
+  font-size: var(--paragraph-font-size);
+  font-style: italic;
+ }
+
+ .paragraph-bold{
+  font-family: var(--paragraph-font-family);
+  font-size: var(--paragraph-font-size);
+  font-weight: var(--bold-weight);
+ }
+
+ .paragraph-bold-italic{
+  font-family: var(--paragraph-font-family);
+  font-size: var(--paragraph-font-size);
+  font-weight: var(--bold-weight);
+  font-style: italic;
+ }
+
+ /**************************/
+
+/***** End Text Classes *****/
+
+/***** Header Nav Bar Classes *****/
+
+  .primary-logo{
+    height: 175px;
+    width: auto;
   }
 
-  /* Roboto Font Family Types*/
-  .roboto-regular {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+  .header-nav-bar{
+    display: flex;
+    flex-direction: row;
+    height: 175px;
+    width: 100%;
   }
-  
-  .roboto-bold {
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-    font-style: normal;
+
+  .nav-list-item{
+    list-style: none;
   }
-  
-  .roboto-regular-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: italic;
+
+/**********************************/
+
+/***** Button Classes *****/
+
+.donation-button{
+  height: 75px;
+  width: 300px;
+  font-size: var(--header-font-size);
+  font-family: var(--header-font-family);
+  font-style: italic;
+  font-weight: var(--bold-weight);
+
+  border-radius: 0.5em;
+  border-width: 0.04em;
+  background-color: var(--primary-color-jarcarta);
+  color: var(--primary-color-white);
+}
+
+#donation-button:active {
+  background-color: var(--darkened-jarcarta);
+}
+
+.center{
+  text-align: center;
+}
+
+/**************************/
+
+/***** Mobile Design *****/
+
+@media only screen and (max-width: 600px) {
+  body{
+    background-color: var(--primary-color-white);
   }
-  
-  /***** End font families *****/
-  
+
+  .header-nav-bar {
+    text-align: left;
+  }
+}
+
+/**********************************/
