@@ -29,11 +29,19 @@ body{
   background-color: var(--primary-color-white);
  }
 
-.horizontal-flex-container{
-  width: 100%;
-  gap: 30px;
+.nav-list-flex-container{
   display: flex;
-  transform:translateY(50%);
+  gap: 30px;
+}
+
+.donation-button-container{
+  margin: 10%;
+  text-align: center;
+}
+
+.footer-content{
+  display: flex;
+  align-items: ;
 }
 
 /********************************/
@@ -111,6 +119,8 @@ body{
     display: flex;
     flex-direction: row;
     height: 175px;
+    border-bottom: #000000 solid;
+    align-items: center;
     width: 100%;
   }
 
@@ -138,10 +148,6 @@ body{
 
 #donation-button:active {
   background-color: var(--darkened-jarcarta);
-}
-
-.center{
-  text-align: center;
 }
 
 /**************************/
